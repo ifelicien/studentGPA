@@ -2,21 +2,26 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        nameFinder();
+        String sName = nameFinder();
+        display(sName)
+        ;
     }
 
     static String nameFinder(){
-        int i = 0;
-
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Please enter the students name: ");
 
-        do {
+        for(int i = 0;i < 6;i++) {
             String studentName = myScanner.nextLine();
 
-            i++;
             return studentName;
         }
-        while(i < 6);
+        return null;
+    }
+
+    static void display(String name){
+        System.out.println(name);
     }
 }
+
+
